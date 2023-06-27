@@ -35,12 +35,7 @@ const vacantesSchema = new mongoose.Schema({
         type : String,
         lowercase: true
     },
-    skills: [String],
-    candidatos: [{
-        nombre: String,
-        email: String,
-        cv : String
-    }]
+    skills: [String]
 });
 vacantesSchema.pre("save", function(next) {
     //Crear la url
